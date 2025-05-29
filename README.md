@@ -58,3 +58,10 @@ python vigenere.py "MENSAJE" "CLAVE"
 
 # Ejecutar cifrado de Transposición Simple
 python transposicion.py "MENSAJE" "CLAVE"
+
+```
+
+## Desarrollador
+
+Brayan Alejandro Riveros Rodríguez - 20201020084
+Estudiante de Ingenieria de sistemas de la Universidad Distrital.
