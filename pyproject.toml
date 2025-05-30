@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Algoritmos de cifrado Vigenère y Transposición Simple"
 authors = [{ name = "Alejandro riveros"}]
 requires-python = ">=3.11"
-dependencies = ["tabulate"]
 
 [build-system]
 requires = ["setuptools>=61.0"]

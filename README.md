@@ -42,9 +42,7 @@ Este proyecto tiene fines educativos y está orientado a la materia de redes de 
 ## 🛠️ Requisitos
 
 - Python 3.11.6
-*o reemplazar por el lenguaje correspondiente si no es Python.*
 
-- No requiere librerías externas (si aplica).
 
 ---
 
