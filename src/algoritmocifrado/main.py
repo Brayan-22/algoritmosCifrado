@@ -25,7 +25,7 @@ def main():
             descifrado = descifrar_vigenere(texto_cifrado, clave)
             print(descifrado)
         elif cifrado == 0:
-            relleno = "_"
+            relleno = "X"
             print("Cifrado Transposición simple")
             print(f"\nCifrando {texto} con la clave {clave}")
             texto_cifrado = cifrar_transposicion(texto, clave, relleno)
@@ -47,7 +47,7 @@ def main():
             descifrado = descifrar_vigenere(texto_cifrado, clave_defaul)
             print(descifrado)
         elif cifrado == 0:
-            relleno = "_"
+            relleno = "X"
             print("Cifrado Transposición simple")
             print(f"\nCifrando {texto_defaul} con la clave {clave_defaul}")
             texto_cifrado = cifrar_transposicion(texto_defaul, clave_defaul, relleno)

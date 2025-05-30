@@ -12,16 +12,8 @@ def obtener_orden_columnas(clave):
     Orden para leer columnas (índices originales): 3 (H), 5 (N), 4 (O), 0 (P), 2 (T), 1 (Y)
     """
     indices_ordenados = sorted(range(len(clave)), key=lambda k: clave[k])
-    # Lo anterior da el orden de las columnas si se ordenaran alfabéticamente.
-    # Necesitamos un mapeo que nos diga, para la columna 0 (original), 1, 2... cuál es su
-    # posición en la lectura cifrada.
 
-    # Ejemplo: CLAVE = "ZEBRAS"
-    # Z E B R A S
-    # 0 1 2 3 4 5 (índices originales)
-    # Orden alfabético: A(4), B(2), E(1), R(3), S(5), Z(0)
-    # Entonces, la columna que se lee primero es la columna 4 (A), luego la 2 (B), etc.
-    # orden_lectura = [4, 2, 1, 3, 5, 0]
+
     
     clave_con_indices = []
     for i, char_clave in enumerate(clave):
@@ -65,12 +57,7 @@ def cifrar_transposicion(texto_plano, clave, caracter_relleno='X'):
     if not clave.isalpha():
         print("Error: La clave debe contener solo letras.")
         return ""
-    # Para simplificar, convertimos la clave a mayúsculas y eliminamos duplicados si se quisiera,
-    # pero para la transposición simple estándar, los duplicados afectan el orden.
-    # Aquí, usaremos la clave tal cual, y el orden se basará en la primera aparición en caso de duplicados.
-    # Una mejor práctica sería exigir claves sin letras repetidas o definir cómo manejarlas.
-    # Por ahora, sorted() manejará duplicados de forma estable si Python lo hace,
-    # o podemos usar enumerate y sort como en obtener_orden_columnas.
+
 
     print("--- Proceso de Cifrado por Transposición Simple ---")
     print(f"Texto Plano   : '{texto_plano}'")
@@ -143,10 +130,7 @@ def descifrar_transposicion(texto_cifrado, clave, caracter_relleno='X'):
         print(f"Advertencia: La longitud del texto cifrado ({len(texto_cifrado)}) "
               f"no es un múltiplo exacto de la longitud de la clave ({num_columnas}). "
               f"Esto puede suceder si el relleno no fue perfecto o se perdió.")
-        # Ajustar num_filas es complejo si no se sabe cuántos caracteres faltan en la última fila de la "matriz original"
-        # Para este ejemplo, asumimos que el texto cifrado tiene la longitud correcta para llenar la matriz de descifrado.
-        # O que el texto cifrado es exactamente el producto de num_filas y num_columnas después del cifrado.
-        # Si el cifrado siempre rellena, esto no debería ser un problema.
+
 
     print(f"Dimensiones Matriz: {num_filas} filas x {num_columnas} columnas")
 

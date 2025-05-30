@@ -33,14 +33,14 @@ def cifrar_vigenere(texto_plano:str, clave_original:str):
     clave_extendida = generar_clave_vigenere(texto_plano, clave_original)
     
     print("---Proceso de cifrado Vigenère---")
-    print(f"Texto plano: {texto_plano}")
+    print(f"Mensaje: {texto_plano}")
     print(f"Clave original: {clave_original}")
     print(f"Clave extendida: {clave_extendida}")
     
     print("Paso a Paso:")
-    print("----------------------------------------------------")
-    print("| Letra Texto | Letra Clave | Op. Numérica | Letra Cifrada |")
-    print("|-------------|-------------|--------------|---------------|")
+    print("--------------------------------------------------------------------")
+    print("| Letra Texto | Letra Clave | Op. Numérica         | Letra Cifrada |")
+    print("|-------------|-------------|----------------------|---------------|")
     
     for i in range(len(texto_plano)):
         letra_texto = texto_plano[i]
@@ -49,7 +49,7 @@ def cifrar_vigenere(texto_plano:str, clave_original:str):
         # Convertir letras a números (A=0, B=1, ..., Z=25)
         valor_texto = ord(letra_texto) - ord('A')
         valor_clave = ord(letra_clave) - ord('A')
-
+        
         # Aplicar la fórmula del cifrado Vigenère: C = (P + K) mod 26
         valor_cifrado = (valor_texto + valor_clave) % 26
 
@@ -58,7 +58,7 @@ def cifrar_vigenere(texto_plano:str, clave_original:str):
         texto_cifrado += letra_cifrada
         print(f"|      {letra_texto}      |      {letra_clave}      |  ({valor_texto:2} + {valor_clave:2}) % 26 = {valor_cifrado:2} |       {letra_cifrada}       |")
         
-    print("----------------------------------------------------")
+    print("--------------------------------------------------------------------")
     print(f"\nTexto Cifrado: {texto_cifrado}")
     print("--- Fin del Proceso ---")
     return texto_cifrado
@@ -90,9 +90,9 @@ def descifrar_vigenere(texto_cifrado, clave_original):
     print(f"Clave Ext.   : {clave_extendida}\n")
 
     print("Paso a Paso:")
-    print("----------------------------------------------------")
-    print("| Letra Cifrada | Letra Clave | Op. Numérica | Letra Texto |")
-    print("|---------------|-------------|--------------|-------------|")
+    print("------------------------------------------------------------------------")
+    print("| Letra Texto | Letra Clave |        Op. Numérica        |Letra Cifrada|")
+    print("|-------------|-------------|----------------------------|-------------|")
 
     for i in range(len(texto_cifrado)):
         letra_cifrada = texto_cifrado[i]
@@ -111,7 +111,7 @@ def descifrar_vigenere(texto_cifrado, clave_original):
 
         print(f"|       {letra_cifrada}       |      {letra_clave}      | ({valor_cifrado:2} - {valor_clave:2} + 26) % 26 = {valor_texto:2} |      {letra_texto}      |")
 
-    print("----------------------------------------------------")
+    print("------------------------------------------------------------------------")
     print(f"\nTexto Descifrado: {texto_descifrado}")
     print("--- Fin del Proceso ---")
     return texto_descifrado
