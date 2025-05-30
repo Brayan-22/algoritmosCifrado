@@ -53,12 +53,8 @@ Este proyecto tiene fines educativos y está orientado a la materia de redes de 
 Para ejecutar el proyecto:
 
 ```bash
-# Ejecutar cifrado de Vigenère
-python vigenere.py "MENSAJE" "CLAVE"
-
-# Ejecutar cifrado de Transposición Simple
-python transposicion.py "MENSAJE" "CLAVE"
-
+# Cifrado
+python src/algoritmocifrado/main.py 1 "MENSAJE" "CLAVE"
 ```
 
 ## Desarrollador
